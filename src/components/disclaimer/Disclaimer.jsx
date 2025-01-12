@@ -37,7 +37,7 @@ import WebFont from "webfontloader";
 import { useQuiz } from "../../context/QuizContext";
 import database from "../../config/configuration";
 import { collection, addDoc } from "firebase/firestore";
-import "../../../public/disclaimer/style.css";
+import "./style.css";
 import { ToastContainer, toast } from "react-toastify"; // Import Toastify
 import "react-toastify/dist/ReactToastify.css"; // Toastify styles
 import { getDatabase, ref, push } from "firebase/database";
