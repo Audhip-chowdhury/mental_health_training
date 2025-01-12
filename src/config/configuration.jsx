@@ -9,14 +9,13 @@ import { getFirestore } from "firebase/firestore";
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDu0DdOgokO4HTpaViV_W3FjQUyZ3hJyTs",
-  authDomain: "hr-quiz-app.firebaseapp.com",
-  databaseURL: "https://hr-quiz-app-default-rtdb.firebaseio.com",
-  projectId: "hr-quiz-app",
-  storageBucket: "hr-quiz-app.firebasestorage.app",
-  messagingSenderId: "341058487967",
-  appId: "1:341058487967:web:d4eda05e218679663044aa",
-  measurementId: "G-VYW2THLHP1",
+  apiKey: "AIzaSyBSbf1nsUOVrVnxlCzD_XkLUntZZiQ-f-o",
+  authDomain: "mental-health-training-d27e4.firebaseapp.com",
+  databaseURL: "https://mental-health-training-d27e4-default-rtdb.firebaseio.com",
+  projectId: "mental-health-training-d27e4",
+  storageBucket: "mental-health-training-d27e4.firebasestorage.app",
+  messagingSenderId: "48745831742",
+  appId: "1:48745831742:web:fa663258f4183976a6a06f"
 };
 
 // Initialize Firebase
