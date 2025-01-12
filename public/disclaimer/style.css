@@ -1,0 +1,19 @@
+/* App.css */
+.bg-container {
+  background-image: url("backgrounds/background_main_blur.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Mobile-specific background image */
+@media (max-width: 768px) {
+  .bg-container {
+    background-image: url("backgrounds/background_main_blur_mobile.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+  }
+}
