@@ -37,7 +37,7 @@ import WebFont from "webfontloader";
 import { useQuiz } from "../../context/QuizContext";
 import database from "../../config/configuration";
 import { collection, addDoc } from "firebase/firestore";
-import "./style.css";
+// import "./style.css";
 import { ToastContainer, toast } from "react-toastify"; // Import Toastify
 import "react-toastify/dist/ReactToastify.css"; // Toastify styles
 import { getDatabase, ref, push } from "firebase/database";
@@ -101,9 +101,27 @@ const Disclaimer = () => {
       console.error("Error writing to database: ", e);
     }
   };
+  const styles = {
+    container: {
+      backgroundImage: `url('/backgrounds/background_main_blur.jpg')`,
+      backgroundSize: "cover",
+      backgroundPosition: "center center",
+      height: "100vh",
+      width: "100%",
+    },
+    containerMobile: {
+      "@media (max-width: 768px)": {
+        backgroundImage: `url('/backgrounds/background_main_blur_mobile.jpg')`,
+      },
+    },
+    card: {
+      transition: "opacity 0.7s ease-in-out",
+      opacity: isFading ? 0 : 1,
+    },
+  };
 
   return (
-    <div className="bg-container bg-opacity-20">
+    <div style={styles.container} className="bg-container bg-opacity-20">
       <ToastContainer></ToastContainer>
       <div className="lg:w-[75%]">
         <h1 class="text-head font-bebas flex items-center justify-center pt-16 text-6xl  md:text-5xl lg:text-9xl">
