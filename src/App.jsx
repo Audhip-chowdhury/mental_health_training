@@ -6,12 +6,14 @@ import StoryPage from "./components/StoryPage";
 import Disclaimer from "./components/disclaimer/Disclaimer";
 import FeedbackForm from "./components/FeedbackForm";
 import FinishScreen from "./components/FinishScreen";
+import PreForm from "./components/PreForm";
 
 function App() {
   return (
-    <div className="text-textColor">
+    <div className="text-textColor bg-[#f8e5d0]">
       <BrowserRouter>
         <Routes>
+        <Route path="/preform" element={<PreForm />}></Route>
           <Route path="/home" element={<HomeAvatars />}>
             {" "}
           </Route>

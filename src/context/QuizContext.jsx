@@ -5,13 +5,14 @@ const QuizContext = createContext();
 
 // Provide the context
 export function QuizProvider({ children }) {
-  const [points, setPoints] = useState(100); // Initial points
+  const [points, setPoints] = useState(1000); // Initial points
   const [questionIndex, setQuestionIndex] = useState(0); // Start at question 0
   const [currentLevel, setCurrentLevel] = useState(0); // Track the current level
   const [levelEnded, setLevelEnded] = useState(false); // Track if the level has ended
   const [username, setUsername] = useState("");
   const [badge, setBadge] = useState(0);
   const [userkey, setuserkey] = useState("");
+  const [isadded , setisadded]=useState(0)
   return (
     <QuizContext.Provider
       value={{
@@ -29,6 +30,8 @@ export function QuizProvider({ children }) {
         setBadge,
         userkey,
         setuserkey,
+        isadded,
+        setisadded
       }}
     >
       {children}

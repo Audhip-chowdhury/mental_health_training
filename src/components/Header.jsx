@@ -5,17 +5,22 @@ import { useQuiz } from "../context/QuizContext";
 import { AiFillDollarCircle } from "react-icons/ai";
 import { GiRibbonMedal } from "react-icons/gi";
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+
 
 function Header() {
-  const { points, currentLevel, levelEnded, setLevelEnded, badge } = useQuiz();
+  const { points, currentLevel, levelEnded, setLevelEnded, badge , isadded } = useQuiz();
   const currentQuiz = quizData.quizzes[currentLevel]; // Current level data
+  useEffect(() => {
+    console.log("isadded:", isadded);
+  }, [points]); // Current level data
 
   return (
     <header className="flex h-[70px] items-center justify-center">
-      <div className="container relative  flex w-full items-center justify-center gap-[10px] lg:mt-36">
+      <div className="container relative  flex w-full items-center justify-center gap-[10px] lg:mt-8 ">
         <div className="  flex w-full items-center justify-center font-bebas text-head">
           {currentQuiz.title && (
-            <h3 className=" text-2xl font-bold lg:text-[40px]">
+            <h3 className=" text-2xl font-bold lg:text-[40px] mt-20 lg:mt-0">
               {currentQuiz.level} : {currentQuiz.title}
             </h3>
           )}

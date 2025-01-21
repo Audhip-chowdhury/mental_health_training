@@ -20,6 +20,9 @@ const Category1 = ({
         <h1 class="flex items-center justify-center text-4xl font-extrabold text-white md:text-4xl lg:text-5xl">
           {question}
         </h1>
+        <h1 class="flex items-center justify-center text-xl  font-bold  text-black opacity-50 md:text-4xl lg:text-xl">
+          (Flip the cards to know the story)
+        </h1>
         <div className="mt-20 flex flex-col items-center lg:flex-row lg:justify-around lg:gap-8">
           {options[0].username.map((option, index) => (
             <FlipCard
