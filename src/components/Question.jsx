@@ -145,7 +145,7 @@ function Question() {
   }, [levelEnded]);
   useEffect(() => {
     if (username === "") {
-      navigate("/disclaimer");
+      navigate("/preform");
     }
   }, []);
   const renderCategoryComponent = () => {

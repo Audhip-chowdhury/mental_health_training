@@ -7,6 +7,7 @@ import Disclaimer from "./components/disclaimer/Disclaimer";
 import FeedbackForm from "./components/FeedbackForm";
 import FinishScreen from "./components/FinishScreen";
 import PreForm from "./components/PreForm";
+import PostForm from "./components/PostForm";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
           <Route path="/story" element={<StoryPage />}></Route>
           <Route path="/feedback" element={<FeedbackForm />}></Route>
           <Route path="/finish" element={<FinishScreen />}></Route>
+          <Route path="/postform" element={<PostForm />}></Route>
         </Routes>
       </BrowserRouter>
     </div>

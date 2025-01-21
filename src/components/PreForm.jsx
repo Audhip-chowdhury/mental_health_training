@@ -138,7 +138,7 @@ const MCQPage = () => {
 
   return (
     <div className="max-w-4xl mx-auto p-6 bg-[#f8e5d0]">
-      <h1 className="text-3xl font-semibold text-[#5A3D36] mb-4">MCQ Questions</h1>
+      <h1 className="text-3xl font-semibold text-[#5A3D36] mb-4">Pre Game Questions</h1>
       
       <div className="mb-6">
         <label className="block text-[#6B4F41] font-bold">Name:</label>

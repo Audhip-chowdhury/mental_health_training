@@ -71,10 +71,10 @@ const LevelEnded = () => {
             className="mt-4 rounded-lg bg-[#f8996d] px-6 py-2 text-lg font-bold text-white hover:bg-para"
             type="button"
             onClick={() => {
-              navigate("/feedback");
+              navigate("/postform");
             }}
           >
-            Give your feedback
+          Post Game Questions
           </button>
         </div>
       </div>
