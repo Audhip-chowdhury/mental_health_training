@@ -33,18 +33,20 @@ export const quizData = {
           question:
             "Which could be a sign of distress that you can observe in Sarita?",
           options: [
-            "avoid social activities",
-            "persistent sadness",
-            "excessive worry ",
-            "avoidance of responsibility ",
-            "perceive",
-            "confidence",
-            "optimism",
+            "Avoid social activities",
+            "Persistent sadness",
+            "Excessive worry ",
+            "Avoidance of responsibility ",
+            "Proactive",
+            "Confidence",
+            "Optimism",
           ],
           points: [+10, +10, +10, +10, -10, -10, -10],
           Category: 2,
+          numofoptions:0,
           correctanswers: [0, 1, 2, 3],
           ytVideos: [],
+          optionsmessage:"Multiple choice question",
         },
       ],
     },
@@ -54,14 +56,14 @@ export const quizData = {
       badge: 1,
       icon: "backgrounds/bg_l2_new.png",
       badgeicon: "badges/badge_l2.png",
-      message: "you have successfully responded to crisis",
+      message: "You have successfully responded to crisis",
       questions: [
         {
           question:
             "you notice Sarita having a panic attack. what is the first thing you should do?",
           options: [
             "Call an ambulance immediately.",
-            "sit with them and encourage slow breathing.",
+            "Sit with them and encourage slow breathing.",
           ],
           points: [-10, +10],
           Category: 3,
@@ -69,9 +71,9 @@ export const quizData = {
         },
         {
           question:
-            "Sarita expresses feelings of wellness hopelessness and mentions she does not see a reason to keep going, what should you do?",
+            "Sarita expresses feelings of hopelessness and mentions she does not see a reason to keep going, what should you do?",
           options: [
-            "king ignore the comment & hope they feel better later",
+            "Ignore the comment & hope they feel better later",
             "Ask directly about the underlying reason.",
           ],
           points: [-10, +10],
@@ -80,7 +82,7 @@ export const quizData = {
         },
         {
           question:
-            "Later that day, in a meeting you see Sarita suddenly breathing rapidly sweating and hypernatural out of anxiety.what among the following can you use to come her down ",
+            "Later that day, in a meeting you see Sarita suddenly breathing rapidly sweating and hyperventilating out of anxiety.what among the following can you use to come her down ",
           options: [
             "54321 technique",
             "hydration and posture",
@@ -90,8 +92,9 @@ export const quizData = {
             "restructuring",
             "gratitude shifts",
           ],
-          points: [70, 30, 40, 20, 60, 50, 10],
-
+          points: [200, 80, 150, 150, 100, 150, 100],
+          numofoptions:2,
+          optionsmessage:"Select any 2 options",
           Category: 2,
           correctanswers: [0, 1, 2, 3, 4, 5, 6],
           ytVideos: [
@@ -194,6 +197,8 @@ export const quizData = {
           Category: 2,
           ytVideos: [],
           correctanswers: [0, 1, 3],
+          numofoptions:0,
+          optionsmessage:"Multiple choice question",
         },
       ],
     },

@@ -12,6 +12,8 @@ const Category2 = ({
   handleOptionClick,
   handleNextQuestion,
   ytVideos,
+  numofoptions,
+  optionsmessage
 }) => {
   const [selectedOptions, setSelectedOptions] = useState([]);
   const [submitted, setSubmitted] = useState(false);
@@ -37,12 +39,22 @@ const Category2 = ({
   };
   const handleOptionSelect = (index) => {
     if (!submitted) {
-      setSelectedOptions(
-        (prevSelected) =>
-          prevSelected.includes(index)
-            ? prevSelected.filter((i) => i !== index) // Deselect if already selected
-            : [...prevSelected, index], // Select if not already selected
-      );
+      setSelectedOptions((prevSelected) => {
+        if (prevSelected.includes(index)) {
+          // Deselect if already selected
+          return prevSelected.filter((i) => i !== index);
+        } else if (numofoptions === 2 && prevSelected.length >= 2) {
+          // If the number of options is 2 and the limit is reached, do nothing
+          toast.warn("You can only select two options!", {
+            position: "top-center",
+            autoClose: 2000, // 2 seconds
+          });
+          return prevSelected;
+        } else {
+          // Select if not already selected
+          return [...prevSelected, index];
+        }
+      });
     }
   };
 
@@ -86,7 +98,11 @@ const Category2 = ({
           <div className="flex h-[20vh] w-full flex-col items-start justify-center gap-[20px]  md:w-[50%] md:justify-between lg:h-[40vh] ">
             <p className="text-left font-openSans text-lg font-bold text-head lg:text-[27px]">
               {question}
+              <p className="text-center font-openSans text-sm font-bold text-black lg:text-[20px] mt-2 mb-2">
+              ({optionsmessage})
             </p>
+            </p>
+            
           </div>
 
           {/* Options */}

@@ -108,7 +108,7 @@ const MCQPage = () => {
           Name: formData.name,
           Age: formData.age,
           Institute: formData.institute,
-          RollNumber: formData.rollNumber,
+          PNR: formData.rollNumber,
           Specialization: formData.specialization,
           PreForm_Answers: selectedAnswers,
         });
@@ -137,7 +137,7 @@ const MCQPage = () => {
   };
 
   return (
-    <div className="max-w-4xl mx-auto p-6 bg-[#f8e5d0]">
+    <div className="max-w-4xl mx-auto p-6 bg-[#f8e5d0] " >
       <h1 className="text-3xl font-semibold text-[#5A3D36] mb-4">Pre Game Questions</h1>
       
       <div className="mb-6">
@@ -147,6 +147,7 @@ const MCQPage = () => {
           name="name"
           value={formData.name}
           onChange={handleInputChange}
+          placeholder="e.g. John Doe"
           className="mt-1 p-2 border border-[#333333] rounded  w-full lg:w-[60%] text-gray-600"
         />
       </div>
@@ -158,6 +159,7 @@ const MCQPage = () => {
           name="age"
           value={formData.age}
           onChange={handleInputChange}
+          placeholder="35 "
           className="mt-1 p-2 border border-[#333333] rounded w-full lg:w-[60%] text-gray-600"
         />
       </div>
@@ -169,17 +171,19 @@ const MCQPage = () => {
           name="institute"
           value={formData.institute}
           onChange={handleInputChange}
+          placeholder="e.g. IIM Ahmedabad"
           className="mt-1 p-2 border border-[#333333] rounded w-full lg:w-[60%] text-gray-600"
         />
       </div>
 
       <div className="mb-6">
-        <label className="block text-[#6B4F41] font-bold">Roll Number:</label>
+        <label className="block text-[#6B4F41] font-bold">PNR:</label>
         <input
           type="text"
           name="rollNumber"
           value={formData.rollNumber}
           onChange={handleInputChange}
+          placeholder="e.g. 1234"
           className="mt-1 p-2 border border-[#333333] rounded w-full lg:w-[60%] text-gray-600"
         />
       </div>
@@ -191,6 +195,7 @@ const MCQPage = () => {
           name="specialization"
           value={formData.specialization}
           onChange={handleInputChange}
+          placeholder="e.g. HR"
           className="mt-1 p-2 border border-[#333333] rounded w-full lg:w-[60%] text-gray-600"
         />
       </div>
@@ -201,6 +206,7 @@ const MCQPage = () => {
           name="email"
           value={formData.email}
           onChange={handleInputChange}
+          placeholder="e.g. johndoe@gmail.com"
           className="mt-1 p-2 border border-[#333333] rounded  w-full lg:w-[60%] text-gray-600"
         />
       </div>

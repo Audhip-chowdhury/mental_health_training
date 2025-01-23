@@ -46,7 +46,7 @@ import { getDatabase, ref, get, update  } from "firebase/database";
 
 const Disclaimer = () => {
   const cards = [
-    "You are a full-time HR professional/manages at a thriving Organization- ABC Pvt. Ltd Recently some talented employees in your team are showing signs of distress.The company has entrusted you with acquiring 1000 MEDICONS by choosing the appropriate choices and creating a supportive environment thus helping the access to people resources.",
+    "You are a full-time HR professional/manages at a thriving Organization- GDC Pvt. Ltd Recently some talented employees in your team are showing signs of distress.The company has entrusted you with acquiring 600 MEDICONS by choosing the appropriate choices and creating a supportive environment thus helping the access to people resources.",
     `With every correct decision, you earn MEDICOINs that can be used for "Mental Health Support" such as therapy session, wellness program or stress management workshop. The Game is not just about a single employee any medicoins you earn can be redeemed for broader medical benefits like arranging team wellness activity funding health insurance upgrades or securing wellness retreat for the entire team.`,
     "Will you be able to strike the right balance between a supportive leader and managing company resources efficiently?",
   ];

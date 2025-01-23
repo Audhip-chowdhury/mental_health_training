@@ -5,7 +5,7 @@ const QuizContext = createContext();
 
 // Provide the context
 export function QuizProvider({ children }) {
-  const [points, setPoints] = useState(1000); // Initial points
+  const [points, setPoints] = useState(100); // Initial points
   const [questionIndex, setQuestionIndex] = useState(0); // Start at question 0
   const [currentLevel, setCurrentLevel] = useState(0); // Track the current level
   const [levelEnded, setLevelEnded] = useState(false); // Track if the level has ended

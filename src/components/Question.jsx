@@ -171,6 +171,8 @@ function Question() {
             handleOptionClick={handleOptionClick}
             handleNextQuestion={handleNextQuestion}
             ytVideos={currentQuestion.ytVideos}
+            numofoptions={currentQuestion.numofoptions}
+            optionsmessage={currentQuestion.optionsmessage}
           />
         );
 
