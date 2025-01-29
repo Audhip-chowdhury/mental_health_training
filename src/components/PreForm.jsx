@@ -24,7 +24,7 @@ const questions = [
     options: [
       "Withdrawal from group activities, Sudden decline in performance, Visible signs of stress ",
       "Missing deadlines, attending meetings, enthusiastic",
-      "fidgeting, irritability, proactive."
+      "Fidgeting, irritability, proactive."
     ],
     corrAns: 0
   },
