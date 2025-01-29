@@ -55,12 +55,27 @@ const LevelEnded = () => {
                 title="Confetti Right"
               ></iframe>
             </div>
+           
           </div>
 
-          <p className="pb-4 text-xl text-para lg:text-2xl">
+          {/* <p className="pb-4 text-xl text-para lg:text-2xl">
             You successfully helped Sarita
-          </p>
-
+          </p> */}
+          {points >= 600 ? (
+              <div>
+                {/* Success Message */}
+                <p className="pb-4 text-xl text-para lg:text-2xl">
+                  You successfully helped Sarita!
+                </p>
+              </div>
+            ) : (
+              <div>
+                {/* Failure Message */}
+                <p className="pb-4 text-xl text-para lg:text-2xl text-center">
+                  Better luck next time! You could've made better choices to help Sarita.
+                </p>
+              </div>
+            )}
           <div className="flex pr-8 text-2xl lg:text-5xl">
             <AiFillDollarCircle className="text-3xl text-yellow-300 lg:text-5xl" />
             <div className="font-bold text-head">{points}</div>
@@ -74,7 +89,7 @@ const LevelEnded = () => {
               navigate("/postform");
             }}
           >
-          Post Game Questions
+            Post Game Questions
           </button>
         </div>
       </div>

@@ -6,7 +6,7 @@ export const quizData = {
       badge: 0,
       icon: "backgrounds/bg_l1_new.jpeg",
       badgeicon: "badges/badge_l1.jpeg",
-      message: "you have successfully identified Sarita to be in distress.",
+      message: "You have successfully identified Sarita to be in distress.",
       questions: [
         {
           question: "Who needs help ?",
@@ -20,9 +20,9 @@ export const quizData = {
               username: ["Sarita", "Jatin", "Rahul"],
 
               para: [
-                "has lost interest in activities that she once enjoyed.",
-                "has a lot of workload but has been recognized as the best employee twice.",
-                "recently married, does avoids informal meeting nowadays.",
+                "Has lost interest in activities that she once enjoyed.",
+                "Has a lot of workload but has been recognized as the best employee twice.",
+                "Recently married, avoids informal meeting nowadays.",
               ],
             },
           ],
@@ -54,13 +54,13 @@ export const quizData = {
       level: "Level 2",
       title: "Responding to crisis",
       badge: 1,
-      icon: "backgrounds/bg_l2_new.png",
+      icon: "backgrounds/bg_l2_new_new.png",
       badgeicon: "badges/badge_l2.png",
       message: "You have successfully responded to crisis",
       questions: [
         {
           question:
-            "you notice Sarita having a panic attack. what is the first thing you should do?",
+            "You notice Sarita having a panic attack. What is the first thing you should do?",
           options: [
             "Call an ambulance immediately.",
             "Sit with them and encourage slow breathing.",
@@ -71,7 +71,7 @@ export const quizData = {
         },
         {
           question:
-            "Sarita expresses feelings of hopelessness and mentions she does not see a reason to keep going, what should you do?",
+            "Sarita expresses feelings of hopelessness and mentions she does not see a reason to keep going, What should you do?",
           options: [
             "Ignore the comment & hope they feel better later",
             "Ask directly about the underlying reason.",
@@ -82,15 +82,15 @@ export const quizData = {
         },
         {
           question:
-            "Later that day, in a meeting you see Sarita suddenly breathing rapidly sweating and hyperventilating out of anxiety.what among the following can you use to come her down ",
+            "Later that day, in a meeting you see Sarita suddenly breathing rapidly sweating and hyperventilating out of anxiety. What among the following can you use to calm her down ",
           options: [
             "54321 technique",
-            "hydration and posture",
-            "box breathing",
-            "butterfly hug",
+            "Hydration and posture",
+            "Box breathing",
+            "Butterfly hug",
             "PMR (progressive muscle relax)",
-            "restructuring",
-            "gratitude shifts",
+            "Restructuring",
+            "Gratitude shifts",
           ],
           points: [200, 80, 150, 150, 100, 150, 100],
           numofoptions:2,
@@ -133,7 +133,7 @@ export const quizData = {
             "Now when you and Sarita are talking: Sarita shares that she feels helpless and agitated. What will you respond?",
           options: [
             "You will give advice and share personal experience.",
-            "You will listen to them and calm them down.", // Correct option
+            "You will listen to them and calm her down.", // Correct option
           ],
           points: [-10, +10],
           Category: 3,
@@ -177,7 +177,7 @@ export const quizData = {
             "Worried about the stigma of seeing a counselor, how can you address their concern?",
           options: [
             "Agree with them and discourage professional help, indicating they will get well soon.",
-            "Educate them about the benefits of professional help (YouTube link) and share stories of others who have benefited from counseling.", // Correct option
+            "Educate them about the benefits of professional help and share stories of others who have benefited from counseling.", // Correct option
           ],
           points: [-10, +10],
           Category: 3,

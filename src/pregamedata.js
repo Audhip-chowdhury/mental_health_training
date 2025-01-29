@@ -11,9 +11,9 @@ export const preformdata = [
     {
       "question": "What are three behavioral signs that may indicate a colleague is in emotional distress?",
       "options": [
-        "Withdrawal from group activities or discussions.",
-        "Sudden decline in performance or missing deadlines.",
-        "Visible signs of stress, such as fidgeting, irritability, or avoiding eye contact."
+        "Withdrawal from group activities, Sudden decline in performance, Visible signs of stress ",
+      "Missing deadlines, attending meetings, enthusiastic",
+      "fidgeting, irritability, proactive."
       ]
     },
     {

@@ -16,15 +16,17 @@ const questions = [
       "Privately ask if they need help",
       "Ignore it",
       "Report it to a senior"
-    ]
+    ],
+    corrAns: 1
   },
   {
     question: "What are three behavioral signs that may indicate a colleague is in emotional distress?",
     options: [
-      "Withdrawal from group activities or discussions.",
-      "Sudden decline in performance or missing deadlines.",
-      "Visible signs of stress, such as fidgeting, irritability, or avoiding eye contact."
-    ]
+      "Withdrawal from group activities, Sudden decline in performance, Visible signs of stress ",
+      "Missing deadlines, attending meetings, enthusiastic",
+      "fidgeting, irritability, proactive."
+    ],
+    corrAns: 0
   },
   {
     question: "What is the first step you would take if you suspect someone is facing a personal or emotional crisis in the workplace?",
@@ -32,7 +34,8 @@ const questions = [
       "Approach the person privately and express concern in a non-judgmental way.",
       "Listen actively without interrupting or offering immediate solutions.",
       "Avoid making assumptions or pressuring the person to talk."
-    ]
+    ],
+    corrAns: 1
   },
   {
     question: "How would you address bystanders in a workplace crisis to ensure they contribute positively instead of worsening the situation?",
@@ -41,7 +44,8 @@ const questions = [
       "Ask them to leave",
       "Involve them in a supportive",
       "Let them decide what to do"
-    ]
+    ],
+    corrAns: 2
   },
   {
     question: "What workplace policies or guidelines can assist in responding to a mental health crisis?",
@@ -49,7 +53,8 @@ const questions = [
       "Familiarity with Employee Assistance Programs (EAPs).",
       "Knowledge of mental health leave policies or accommodations.",
       "Awareness of workplace harassment or grievance procedures that might indirectly affect mental health."
-    ]
+    ],
+    corrAns: 0
   },
   {
     question: "Which among the following is the best technique among the MHFA when coping anxiety at workplace?",
@@ -58,7 +63,8 @@ const questions = [
       "Drink water",
       "Give Ventilation",
       "Panic yourself and let others handle it."
-    ]
+    ],
+    corrAns: 0
   }
 ];
 
@@ -74,11 +80,20 @@ const MCQPage = () => {
     email:""
   });
   const [selectedAnswers, setSelectedAnswers] = useState({});
+  const [corrAnswers, setcorrAnswers] = useState({});
+
   const [submitted, setSubmitted] = useState(false);
   const navigate = useNavigate();
 
-  const handleChange = (questionIndex, answer) => {
+  const handleChange = (questionIndex, answerIndex , answer) => {
+    console.log(questionIndex , answerIndex)
+  
     setSelectedAnswers((prev) => ({ ...prev, [questionIndex]: answer }));
+    setcorrAnswers((prev) => ({
+      ...prev,
+      [questionIndex]: answerIndex === questions[questionIndex].corrAns ? 1 : 0,
+    }));
+    console.log( answerIndex === questions[questionIndex].corrAns ? 1 : 0)
   };
 
   const handleSubmit =async () => {
@@ -110,7 +125,7 @@ const MCQPage = () => {
           Institute: formData.institute,
           PNR: formData.rollNumber,
           Specialization: formData.specialization,
-          PreForm_Answers: selectedAnswers,
+          PreForm_Answers: corrAnswers,
         });
   
       
@@ -226,10 +241,10 @@ const MCQPage = () => {
                     name={`question-${index}`}
                     value={option}
                     checked={selectedAnswers[index] === option}
-                    onChange={() => handleChange(index, option)}
+                    onChange={() => handleChange(index, optionIndex , option)}
                     className="mr-2 text-[#333333]"
                   />
-                  {option}
+                {option} 
                 </label>
               ))}
             </div>

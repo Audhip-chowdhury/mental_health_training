@@ -16,7 +16,8 @@ const questions= [
         "B. Her performance metrics dropped significantly.",
         "C. She exhibited noticeable behavioral changes like withdrawal and mood swings.",
         "D. She skipped work frequently without notice."
-      ]
+      ],
+      corrAns: 2
     },
     {
       "question": "What was the first step taken as an HR manager when addressing Sara's situation?",
@@ -25,7 +26,8 @@ const questions= [
         "B. Having a private conversation to understand her concerns.",
         "C. Sending an email to the entire team about mental health.",
         "D. Ignoring the signs and focusing on work deadlines."
-      ]
+      ],
+      corrAns: 1
     },
     {
       "question": "During the interaction with Sara, what approach ensured better communication?",
@@ -34,7 +36,8 @@ const questions= [
         "B. Asking open-ended questions to encourage her to share.",
         "C. Providing quick solutions without listening to her fully.",
         "D. Delegating the issue to her immediate supervisor."
-      ]
+      ],
+      corrAns: 1
     },
     {
       "question": "How did Rahul and Jatin, the bystanders, contribute to the resolution process?",
@@ -43,7 +46,8 @@ const questions= [
         "B. They helped create a supportive environment by reducing work pressure.",
         "C. They ignored the signs of distress and focused on their work.",
         "D. They criticized Sara for her lack of performance."
-      ]
+      ],
+      corrAns: 1
     },
     {
       "question": "What measure was taken to ensure Sara’s privacy during the resolution?",
@@ -52,7 +56,8 @@ const questions= [
         "B. Keeping her concerns confidential and involving only necessary personnel.",
         "C. Sharing her challenges with her family and close friends.",
         "D. Posting a memo about workplace challenges to the company notice board."
-      ]
+      ],
+      corrAns : 1
     },
     {
       "question": "What follow-up action was taken to ensure Sara’s well-being?",
@@ -61,7 +66,8 @@ const questions= [
         "B. Encouraging her to attend regular counseling sessions and checking in periodically.",
         "C. Reducing her workload indefinitely without further support.",
         "D. Avoiding further interaction to respect her privacy."
-      ]
+      ],
+      corrAns: 1
     }
   ]
 
@@ -72,10 +78,19 @@ const PostForm = () => {
   const [selectedAnswers, setSelectedAnswers] = useState({});
   const [submitted, setSubmitted] = useState(false);
   const navigate = useNavigate();
+    const [corrAnswers, setcorrAnswers] = useState({});
+  
 
-  const handleChange = (questionIndex, answer) => {
-    setSelectedAnswers((prev) => ({ ...prev, [questionIndex]: answer }));
-  };
+    const handleChange = (questionIndex, answerIndex , answer) => {
+      console.log(questionIndex , answerIndex)
+    
+      setSelectedAnswers((prev) => ({ ...prev, [questionIndex]: answer }));
+      setcorrAnswers((prev) => ({
+        ...prev,
+        [questionIndex]: answerIndex === questions[questionIndex].corrAns ? 1 : 0,
+      }));
+      console.log( answerIndex === questions[questionIndex].corrAns ? 1 : 0)
+    };
 const addDatatoDb = async () => {
       console.log("here i am");
       try {
@@ -85,7 +100,7 @@ const addDatatoDb = async () => {
         // Fetch the user's current data
         const snapshot = await get(userRef);
         if (snapshot.exists()) {
-          await update(userRef, { PostForm_Answers: selectedAnswers });
+          await update(userRef, { PostForm_Answers: corrAnswers });
   
         
         } else {
@@ -129,7 +144,7 @@ const addDatatoDb = async () => {
                     name={`question-${index}`}
                     value={option}
                     checked={selectedAnswers[index] === option}
-                    onChange={() => handleChange(index, option)}
+                    onChange={() => handleChange(index, optionIndex , option)}
                     className="mr-2 text-[#333333]"
                   />
                   {option}
