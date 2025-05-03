@@ -8,13 +8,15 @@ import FeedbackForm from "./components/FeedbackForm";
 import FinishScreen from "./components/FinishScreen";
 import PreForm from "./components/PreForm";
 import PostForm from "./components/PostForm";
+import TitlePage from "./components/TitlePage";
 
 function App() {
   return (
-    <div className="text-textColor bg-[#f8e5d0]">
+    <div className="bg-[#f8e5d0] text-textColor">
       <BrowserRouter>
         <Routes>
-        <Route path="/preform" element={<PreForm />}></Route>
+          <Route path="/title" element={<TitlePage />}></Route>
+          <Route path="/preform" element={<PreForm />}></Route>
           <Route path="/home" element={<HomeAvatars />}>
             {" "}
           </Route>
