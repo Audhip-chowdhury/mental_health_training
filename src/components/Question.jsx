@@ -33,7 +33,7 @@ function Question() {
     username,
     userkey,
     isadded,
-    setisadded
+    setisadded,
   } = useQuiz();
   const [isVisible, setIsVisible] = useState(true);
   const currentQuiz = quizData.quizzes[currentLevel]; // Current level data
@@ -94,10 +94,10 @@ function Question() {
 
   const handleOptionClick = (optionPoints) => {
     setPoints(points + optionPoints);
-    if(Math.sign(optionPoints)==1) // Update points
-    setisadded(1)
-    else if(Math.sign(optionPoints) == -1)
-    setisadded(0)
+    if (Math.sign(optionPoints) == 1)
+      // Update points
+      setisadded(1);
+    else if (Math.sign(optionPoints) == -1) setisadded(0);
     addPointstodb(optionPoints);
   };
   const handleNextQuestion = () => {
@@ -145,7 +145,7 @@ function Question() {
   }, [levelEnded]);
   useEffect(() => {
     if (username === "") {
-      navigate("/preform");
+      navigate("/title");
     }
   }, []);
   const renderCategoryComponent = () => {
